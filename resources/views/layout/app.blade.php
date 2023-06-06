@@ -28,12 +28,26 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('pages.index') }}">Início</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Meus Projetos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">+ Criar Projeto</a>
-                </li>
+                @if (session()->get('username') != null)
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{ session()->get('username') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Meus Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">+ Criar Projeto</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('pages.index') }}">Login</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('pages.index') }}">Registre-se</span></a>
+                    </li>
+                @endif
+
+
                 {{-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">Dropdown</a>
