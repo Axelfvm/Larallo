@@ -24,5 +24,5 @@
         </form>
     </div>
 
-    @include('shared.errors')
+    @include('shared.toast')
 @endsection
