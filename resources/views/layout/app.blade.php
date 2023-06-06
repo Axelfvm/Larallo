@@ -26,24 +26,24 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('pages.index') }}">Início</span></a>
+                    <a class="nav-link" href="{{ route('pages.index') }}">Home</span></a>
                 </li>
                 @if (session()->get('username') != null)
                     <li class="nav-item">
                         <a class="nav-link" href="#">{{ session()->get('username') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Meus Projetos</a>
+                        <a class="nav-link" href="#">My Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">+ Criar Projeto</a>
+                        <a class="nav-link" href="#">+ New Project</a>
                     </li>
                 @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('pages.index') }}">Login</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('pages.index') }}">Registre-se</span></a>
+                        <a class="nav-link" href="{{ route('pages.register') }}">Register</span></a>
                     </li>
                 @endif
 
