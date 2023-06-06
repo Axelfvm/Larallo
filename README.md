@@ -1,4 +1,4 @@
-<p align="center"><h1><b>Lara</b>llo</h1></p>
+<p align="center" style="font-size: 25px;"><b>Lara</b>llo</p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
