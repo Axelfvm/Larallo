@@ -7,19 +7,28 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     //
-    public function index(){
+    public function index()
+    {
         return view('pages.index');
     }
 
-    public function projectList(){
-
+    public function register()
+    {
     }
 
-    public function projectMake(){
-
+    public function login()
+    {
     }
 
-    public function projectDelete(){
+    public function projectList()
+    {
+    }
 
+    public function projectMake()
+    {
+    }
+
+    public function projectDelete()
+    {
     }
 }

@@ -31,6 +31,8 @@ return [
 
     'env' => env('APP_ENV', 'production'),
 
+    'FORCE_HTTPS' => (bool) env('FORCE_HTTPS', true),
+
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode

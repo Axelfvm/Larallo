@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
-
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,6 @@ use App\Http\Controllers\PagesController;
 
 Route::get('/', [PagesController::class, 'index'])->name('pages.index');
 
+//User
+Route::get('/register', [PagesController::class, 'register'])->name('pages.register');
+Route::get('/login', [PagesController::class, 'login'])->name('pages.login');
