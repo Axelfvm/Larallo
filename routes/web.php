@@ -19,3 +19,5 @@ Route::get('/', [PagesController::class, 'index'])->name('pages.index');
 //User
 Route::get('/register', [PagesController::class, 'register'])->name('pages.register');
 Route::get('/login', [PagesController::class, 'login'])->name('pages.login');
+
+Route::post('/user/register', [UserController::class, 'register'])->name('user.register');
