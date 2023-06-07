@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('idgenerated')->nullable();
             $table->integer('iduser');
             $table->string('description');
             $table->boolean('public')->default(false);
             $table->boolean('bpass')->default(false);
-            $table->string('password', 4096);
+            $table->string('password', 4096)->nullable();
             $table->timestamps();
         });
     }

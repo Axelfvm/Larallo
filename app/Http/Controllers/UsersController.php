@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use App\Models\Users;
 
-class UserController extends Controller
+class UsersController extends Controller
 {
     //
 

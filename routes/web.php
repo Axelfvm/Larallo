@@ -21,7 +21,7 @@ Route::get('/', [PagesController::class, 'index'])->name('pages.index');
 //User
 Route::get('/register', [PagesController::class, 'register'])->name('pages.user.register');
 Route::get('/login', [PagesController::class, 'login'])->name('pages.user.login');
-route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
+route::get('/logout', [UsersController::class, 'logout'])->name('user.logout');
 
 Route::post('/user/register', [UsersController::class, 'register'])->name('user.register');
 Route::post('/user/login', [UsersController::class, 'login'])->name('user.login');
