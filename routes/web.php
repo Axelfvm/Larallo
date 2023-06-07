@@ -21,3 +21,4 @@ Route::get('/register', [PagesController::class, 'register'])->name('pages.regis
 Route::get('/login', [PagesController::class, 'login'])->name('pages.login');
 
 Route::post('/user/register', [UserController::class, 'register'])->name('user.register');
+Route::post('/user/login', [UserController::class, 'login'])->name('user.login');

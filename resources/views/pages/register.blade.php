@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="container bg-white rounded mt-3 p-3">
-        <form method="POST" action="{{ route('user.register') }}" novalidate>
+        <form method="POST" action="{{ route('user.register') }}">
             @csrf
             <div class="form-row">
                 <div class="form-group col-md-6">
