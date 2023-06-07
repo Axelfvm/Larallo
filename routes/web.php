@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProjectsController;
 use PHPUnit\Framework\Attributes\UsesClass;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,9 +19,12 @@ use PHPUnit\Framework\Attributes\UsesClass;
 Route::get('/', [PagesController::class, 'index'])->name('pages.index');
 
 //User
-Route::get('/register', [PagesController::class, 'register'])->name('pages.register');
-Route::get('/login', [PagesController::class, 'login'])->name('pages.login');
+Route::get('/register', [PagesController::class, 'register'])->name('pages.user.register');
+Route::get('/login', [PagesController::class, 'login'])->name('pages.user.login');
 route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
 
 Route::post('/user/register', [UserController::class, 'register'])->name('user.register');
 Route::post('/user/login', [UserController::class, 'login'])->name('user.login');
+
+//Projects
+Route::get('/projects', [PagesController::class, 'projectList'])->name('pages.project.list');

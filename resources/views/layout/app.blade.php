@@ -35,7 +35,7 @@
                         <a class="nav-link" href="#">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My Projects</a>
+                        <a class="nav-link" href="{{ route('pages.project.list') }}">My Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">+ New Project</a>
@@ -45,10 +45,10 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('pages.login') }}">Login</span></a>
+                        <a class="nav-link" href="{{ route('pages.user.login') }}">Login</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('pages.register') }}">Register</span></a>
+                        <a class="nav-link" href="{{ route('pages.user.register') }}">Register</span></a>
                     </li>
                 @endif
 

@@ -24,6 +24,7 @@ class PagesController extends Controller
 
     public function projectList()
     {
+        return view('pages.projects');
     }
 
     public function projectMake()
