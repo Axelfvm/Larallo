@@ -15,7 +15,8 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('idgenerated')->nullable();
             $table->integer('iduser');
-            $table->string('description');
+            $table->string('title');
+            $table->string('description')->nullable();
             $table->boolean('public')->default(false);
             $table->boolean('bpass')->default(false);
             $table->string('password', 4096)->nullable();

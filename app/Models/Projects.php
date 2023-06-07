@@ -13,6 +13,7 @@ class Projects extends Model
         'id',
         'idgenerated',
         'iduser',
+        'title',
         'description',
         'public',
         'bpass',

@@ -9,8 +9,8 @@
             @csrf
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="description">Description</label>
-                    <input type="text" class="form-control" name="description" id="description">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" name="title" id="title">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="type">Type</label>

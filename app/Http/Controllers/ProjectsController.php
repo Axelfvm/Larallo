@@ -26,7 +26,7 @@ class ProjectsController extends Controller
         $this->validate(
             $request,
             [
-                'description' => 'required|min:3|max:20',
+                'title' => 'required|min:3|max:20',
                 'type' => 'required',
                 'password' => 'max:10'
             ],
@@ -36,7 +36,7 @@ class ProjectsController extends Controller
             $user = $this->repository_Users->where('email', session()->get('email'))->first();
             $cProject = [
                 'iduser' => $user->id,
-                'description' => $request->description,
+                'title' => $request->title,
                 'type' => $type,
                 'bpass' => ($request->password != null ? true : false),
                 'password' => $request->password
