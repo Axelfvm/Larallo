@@ -40,13 +40,15 @@
     <div class="row">
         @foreach ($projects as $project)
             <div class="col-sm m-2">
-                <div id="postIt m-2">
-                    <div class="topBar p-1">
-                        <b>{{ $project->description }}</b>
-                    </div>
-                    <div class="form">
-                        <div contenteditable class=textAria>
-                            Hello, <b>Edit Me First</b> Then Drag & Drop me.
+                <div style="height: 250px; width: 250px;">
+                    <div id="postIt m-2">
+                        <div class="topBar p-1">
+                            <b>{{ $project->description }}</b>
+                        </div>
+                        <div class="form">
+                            <div contenteditable class=textAria>
+                                Hello, <b>Edit Me First</b> Then Drag & Drop me.
+                            </div>
                         </div>
                     </div>
                 </div>
