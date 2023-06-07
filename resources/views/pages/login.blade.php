@@ -16,11 +16,7 @@
                     <input type="password" class="form-control" name="password" id="inputPassword4">
                 </div>
             </div>
-            <div class="form-group">
-                <label for="inputAddress">Full Name</label>
-                <input type="text" class="form-control" name="fullname" id="inputAddress">
-            </div>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-primary">Login</button>
         </form>
     </div>
 

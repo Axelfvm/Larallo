@@ -30,9 +30,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('pages.index') }}">Home</span></a>
                 </li>
-                @if (session()->get('username') != null)
+                @if (session()->get('email') != null)
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{ session()->get('username') }}</a>
+                        <a class="nav-link" href="#">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">My Projects</a>
@@ -40,9 +40,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">+ New Project</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('user.logout') }}">Logout</a>
+                    </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('pages.index') }}">Login</span></a>
+                        <a class="nav-link" href="{{ route('pages.login') }}">Login</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('pages.register') }}">Register</span></a>

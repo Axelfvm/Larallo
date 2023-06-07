@@ -50,5 +50,35 @@ class UserController extends Controller
 
     function login(request $request)
     {
+        $this->validate(
+            $request,
+            [
+                'email' => 'required|email',
+                'password' => 'required|min:6'
+            ],
+        );
+
+        $client = $this->repository_Users->where([['email', $request->email]])->first();
+
+        if ($client != null) {
+            if (Crypt::decrypt($client->password) == $request->password) {
+                session()->put('email', $client->email);
+            } else {
+                redirect()->back()->with('danger', $this->msg->erroLogin);
+            }
+        } else {
+            redirect()->back()->with('danger', $this->msg->erroLogin);
+        }
+        return redirect()->route('pages.index');
+    }
+
+    public function logout()
+    {
+        try {
+            session()->flush();
+        } catch (Exception $e) {
+            redirect()->back()->with('warning', $this->msg->erroProcess);
+        }
+        return redirect()->route('pages.index');
     }
 }
