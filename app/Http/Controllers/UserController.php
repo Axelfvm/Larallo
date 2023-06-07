@@ -22,11 +22,22 @@ class UserController extends Controller
 
     function register(request $request)
     {
-        $this->validate($request, [
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:6',
-            'fullname' => 'required',
-        ]);
+        $this->validate(
+            $request,
+            [
+                'email' => 'required|email|unique:users,email',
+                'password' => 'required|min:6',
+                'fullname' => 'required',
+            ],
+            [
+                'email.required' => 'Email necessário para proseguir',
+                'email.email' => 'Campo tipo Email',
+                'email.unique' => 'Email informado não disponível',
+                'password.required' => 'Senha necessária para proseguir',
+                'password.min:6' => 'Campo senha minímo 6 caracteres',
+                'fullname.required' => 'Campo nome completo necessário',
+            ]
+        );
 
         try {
             $user = ['email' => $request->email, 'password' => Crypt::encrypt($request->password), 'fullname' => $request->fullname];
@@ -35,5 +46,9 @@ class UserController extends Controller
             return redirect()->back()->with('danger', $this->msg->erroRegister);
         }
         return redirect()->back()->with('success', $this->msg->successRegister);
+    }
+
+    function login(request $request)
+    {
     }
 }
