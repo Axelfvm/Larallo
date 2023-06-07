@@ -44,10 +44,16 @@
             -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
             box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
         }
+
+        .tools {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
     </style>
     <div class="row d-flex justify-content-center">
         @foreach ($projects as $project)
-            <div class="col-sm d-flex justify-content-center m-2" style="z-index: {{ $project->id }}">
+            <div class="col-sm d-flex justify-content-center m-3" style="z-index: {{ $project->id }}">
                 <div id="p{{ $project->id }}" style="height: 200px; width: 200px;" class="postit">
                     <div class="topBar p-1">
                         <b>{{ $project->title }}</b>
@@ -56,6 +62,11 @@
                         <div contenteditable class=textAria>
                             {{ $project->description }}
                         </div>
+                    </div>
+                    <div class="tools">
+                        <a class="mr-2" href="#"><i class="fa fa-check"></i></a>
+                        <a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                        <a class="ml-2 mr-1" href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
