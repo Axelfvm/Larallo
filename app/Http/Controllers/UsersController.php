@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
-use App\Models\User;
+use App\Models\Users;
 
 class UserController extends Controller
 {
@@ -14,9 +14,9 @@ class UserController extends Controller
     private $repository_Users;
     private $msg;
 
-    function __construct(User $user)
+    function __construct(Users $users)
     {
-        $this->repository_Users = $user;
+        $this->repository_Users = $users;
         $this->msg = (new MessageController);
     }
 

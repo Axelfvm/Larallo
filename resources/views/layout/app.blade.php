@@ -35,10 +35,10 @@
                         <a class="nav-link" href="#">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('pages.project.list') }}">My Projects</a>
+                        <a class="nav-link" href="{{ route('projects.list') }}">My Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">+ New Project</a>
+                        <a class="nav-link" href="{{ route('pages.projects.make') }}">+ New Project</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('user.logout') }}">Logout</a>

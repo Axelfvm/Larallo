@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Controllers\ProjectsController;
+
 class PagesController extends Controller
 {
     //
@@ -22,16 +24,8 @@ class PagesController extends Controller
         return view('pages.login');
     }
 
-    public function projectList()
+    public function projectsMake()
     {
-        return view('pages.projects');
-    }
-
-    public function projectMake()
-    {
-    }
-
-    public function projectDelete()
-    {
+        return view('pages.projectmake');
     }
 }
