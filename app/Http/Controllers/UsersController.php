@@ -64,12 +64,12 @@ class UsersController extends Controller
             if (Crypt::decrypt($client->password) == $request->password) {
                 session()->put('email', $client->email);
             } else {
-                redirect()->back()->with('danger', $this->msg->erroLogin);
+                return redirect()->route('pages.user.login')->with('danger', $this->msg->erroLogin);
             }
         } else {
-            redirect()->back()->with('danger', $this->msg->erroLogin);
+            return redirect()->route('pages.user.login')->with('danger', $this->msg->erroLogin);
         }
-        return redirect()->route('pages.index');
+        return redirect()->route('pages.user.login')->with('danger', $this->msg->erroLogin);
     }
 
     public function logout()
